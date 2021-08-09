@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wang.dao.DeptDao">
+
+    <select id="getByID" parameterType="String" resultType="com.wang.pojo.Dept">
+        select * from dept where did = #{id}
+    </select>
+
+    <select id="listDept" resultType="com.wang.pojo.Dept">
+        select * from dept
+    </select>
+
+    <insert id="addDept" parameterType="com.wang.pojo.Dept">
+       insert into dept (id,dname,de_source)
+       values (#{id},#{dname},#{de_source})
+    </insert>
+
+</mapper>
