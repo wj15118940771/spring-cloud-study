@@ -13,14 +13,13 @@ import java.util.List;
  * @version 1.0
  * @date 2021/8/9 15:25
  **/
-@Controller
-@RequestMapping("/dept")
+@RestController
 public class DeptController {
 
     @Autowired
     private DeptService deptService;
 
-    @RequestMapping("/list")
+    @GetMapping("/dept/list")
     public List<Dept> listDept(){
         return deptService.listDept();
     }
